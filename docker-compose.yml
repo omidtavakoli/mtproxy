@@ -10,7 +10,7 @@ services:
           - "2398:2398" # ONLY FOR TESTING - Show proxy stats on port 2398 outside of docker
         volumes:
            - "proxy-config:/data"
-        restart: unless-stopped
+        restart: always
         env_file:
            - ./config.env
 volumes:
